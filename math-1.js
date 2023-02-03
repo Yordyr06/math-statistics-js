@@ -13,13 +13,13 @@ const squareCalc = (side) => {
 
 
 // Calculos basicos para un triangulo con javascript
-const triangleCalc = (sideA, sideB, base, hight) => {
-  const perimeter = sideA + sideB + base;
+const triangleCalc = (side, base) => {
+  const perimeter = (2 * side) + base;
+  const hight = Math.sqrt((side ** 2) - ((base ** 2)/4)).toFixed(2);
   const area = (base * hight) / 2;
   
   return{
-    sideA,
-    sideB,
+    side,
     base,
     hight,
     perimeter,
