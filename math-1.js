@@ -10,6 +10,8 @@ const squareCalc = (side) => {
   }
 }
 
+
+
 // Calculos basicos para un triangulo con javascript
 const triangleCalc = (sideA, sideB, base, hight) => {
   const perimeter = sideA + sideB + base;
@@ -18,6 +20,21 @@ const triangleCalc = (sideA, sideB, base, hight) => {
   return{
     sideA,
     sideB,
+    base,
+    hight,
+    perimeter,
+    area,
+  }
+}
+
+
+
+// Calculos basicos para un triangulo con javascript
+const rectangleCalc = (base, hight) => {
+  const perimeter = 2 * (base * hight);
+  const area = base * hight;
+
+  return {
     base,
     hight,
     perimeter,
