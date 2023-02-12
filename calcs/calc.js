@@ -1,11 +1,13 @@
+const ObjCalc = new Object;
+
 // Funcion para calcular promedio
-const average = (array) => {
+ObjCalc.average = (array) => {
   const result = array.reduce((sum, no) => sum + no) / array.length;
   return result;
 }
 
 // Fucion para determinar la mediana
-const median = (array) => {
+ObjCalc.median = (array) => {
   let median;
   array = array.sort((a, b) => a - b);
   
@@ -20,7 +22,7 @@ const median = (array) => {
 }
 
 // Funcion para determinar la moda
-const mode = (array) => {
+ObjCalc.mode = (array) => {
   const obj = new Object();
   let arr;
   let mode;
@@ -38,46 +40,16 @@ const mode = (array) => {
   return mode;
 };
 
-// Reto. Calcular otro tipo de promedio.
-  // ¿Cuál tipo de promedio elegiste para trabajar?
-  // ¿Qué casos de uso tiene tu tipo de promedio?
-  // ¿Cómo traduces su fórmula a código JavaScript?
-
-// Promedio Ponderado.
-// Definir el conjunto de números junto al peso de cada elemento
-const notes = [
-  {
-    subject: 'Programming',
-    note: 10,
-    credit: 4,
-  },
-
-  {
-    subject: 'Data Base',
-    note: 7,
-    credit: 3,
-  },
-  
-  {
-    subject: 'Cloud',
-    note: 8,
-    credit: 5,
-  },
-];
-
-const weightedAverage = (array) => {
-  // Multiplicar cada número de la lista por su peso
+// Funcion para determinar el promedio ponderado
+ObjCalc.weightedAverage = (array) => {
   let subject = array.map(value => value.note * value.credit);
-
-  // Sumar todos los elementos del arreglo de elementos multiplicados por su peso
   subject = subject.reduce((sum, value) => sum + value);
 
-  // Sumar todos los pesos (créditos)
   let credit = array.map(value => value.credit);
   credit = credit.reduce((sum, value) => sum + value);
-
-  // Hacer la división entre ambas “sumas”
+  
   let result = subject / credit;
   result = Number(result.toFixed(2));
+  
   return result;
 }
