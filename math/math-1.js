@@ -3,11 +3,11 @@ const squareCalc = (side) => {
   const perimeter = side * 4;
   const area = side * side;
 
-  return{
+  return [
     side,
     perimeter,
     area,
-  }
+  ]
 }
 
 
@@ -18,13 +18,13 @@ const triangleCalc = (side, base) => {
   const hight = Math.sqrt((side ** 2) - ((base ** 2)/4)).toFixed(2);
   const area = (base * hight) / 2;
   
-  return{
+  return [
     side,
     base,
     hight,
     perimeter,
     area,
-  }
+  ]
 }
 
 
@@ -34,10 +34,10 @@ const rectangleCalc = (base, hight) => {
   const perimeter = 2 * (base * hight);
   const area = base * hight;
 
-  return {
+  return [
     base,
     hight,
     perimeter,
     area,
-  }
+  ]
 }
