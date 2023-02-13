@@ -13,7 +13,7 @@ ObjCalc.median = (array) => {
   
   if (!(array.length % 2)) {
     median = array.length / 2;
-    return average([array[median, median - 1]]);
+    return ObjCalc.average([array[median, median - 1]]);
 
   } else {
     median = Math.floor(array.length / 2);
