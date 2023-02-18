@@ -1,12 +1,12 @@
 const ObjCalc = new Object;
 
-// Funcion para calcular promedio
+// Función para calcular promedio
 ObjCalc.average = (array) => {
   const result = array.reduce((sum, no) => sum + no) / array.length;
   return result;
 }
 
-// Fucion para determinar la mediana
+// Función para determinar la mediana
 ObjCalc.median = (array) => {
   let median;
   array = array.sort((a, b) => a - b);
@@ -21,7 +21,7 @@ ObjCalc.median = (array) => {
   }
 }
 
-// Funcion para determinar la moda
+// Función para determinar la moda
 ObjCalc.mode = (array) => {
   const obj = new Object();
   let arr;
@@ -40,7 +40,7 @@ ObjCalc.mode = (array) => {
   return mode;
 };
 
-// Funcion para determinar el promedio ponderado
+// Función para determinar el promedio ponderado
 ObjCalc.weightedAverage = (array) => {
   let subject = array.map(value => value.note * value.credit);
   subject = subject.reduce((sum, value) => sum + value);
